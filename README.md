@@ -1,6 +1,8 @@
 # Snake
 Classic snake game with background music and a high score system.
 
+Music by SkeleMan!: https://youtu.be/WRND7MEl4dI
+
 ![image](https://user-images.githubusercontent.com/54452350/191975024-9d3655f8-4fae-44dd-a6fc-05a55745779c.png)
 
 
