@@ -42,6 +42,7 @@ public class GamePanel extends JPanel implements ActionListener {
         g.fillRect(0,0,Game.WIDTH, Game.HEIGHT);
     }
 
+/*
     public void renderGrid(Graphics g){
         g.setColor(Color.white);
         for(int i=0; i<Game.WIDTH/Game.UNIT_SIZE; i++){
@@ -49,6 +50,7 @@ public class GamePanel extends JPanel implements ActionListener {
             g.drawLine(0, i*Game.UNIT_SIZE, Game.WIDTH,i*Game.UNIT_SIZE);
         }
     }
+*/
 
     public void renderScore(Graphics g){
         g.setColor(Color.white);
