@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="MakeZip">
+    <output-path>$USER_HOME$/OneDrive/Desktop</output-path>
+    <root id="root">
+      <element id="archive" name="Snake.zip">
+        <element id="directory" name="resources">
+          <element id="dir-copy" path="$PROJECT_DIR$/resources" />
+        </element>
+        <element id="artifact" artifact-name="Snake:jar" />
+      </element>
+    </root>
+  </artifact>
+</component>
