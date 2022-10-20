@@ -1,28 +1,19 @@
-import javax.sound.sampled.*;
-import java.io.File;
-import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.net.URL;
 
 public class BackGroundMusic implements Runnable {
     @Override
     public void run() {
-        AudioInputStream stream = null;
         try {
-            stream = AudioSystem.getAudioInputStream(new File("resources/Dreams.wav"));
-        } catch (UnsupportedAudioFileException | IOException e) {
-            e.printStackTrace();
-        }
-        Clip clip = null;
-        try {
-            clip = AudioSystem.getClip();
-        } catch (LineUnavailableException e) {
-            e.printStackTrace();
-        }
-        try {
-            assert clip != null;
+            URL musicURL = getClass().getResource("Dreams.wav");
+            AudioInputStream stream = AudioSystem.getAudioInputStream(musicURL);
+            Clip clip = AudioSystem.getClip();
             clip.open(stream);
-        } catch (LineUnavailableException | IOException e) {
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
 }
